@@ -1,0 +1,31 @@
+﻿from homeassistant.const import Platform
+
+DOMAIN = "ergomotion_ksbt"
+NAME = "Ergomotion KSBT"
+VERSION = "0.1.0"
+
+PLATFORMS: list[Platform] = [
+    Platform.BINARY_SENSOR,
+    Platform.BUTTON,
+    Platform.COVER,
+    Platform.NUMBER,
+    Platform.SELECT,
+    Platform.SENSOR,
+]
+
+WRITE_CHAR_UUID = "6e400002-b5a3-f393-e0a9-e50e24dcca9e"
+NOTIFY_CHAR_UUID = "6e400003-b5a3-f393-e0a9-e50e24dcca9e"
+
+CONF_HEAD_HOLD_SECONDS = "head_hold_seconds"
+CONF_FEET_HOLD_SECONDS = "feet_hold_seconds"
+CONF_LUMBAR_HOLD_SECONDS = "lumbar_hold_seconds"
+
+PREPARE_QUERY_DELAY_SECONDS = 0.3
+PREPARE_READY_DELAY_SECONDS = 1.0
+PRESET_SETTLE_SECONDS = 1.3
+REPEAT_INTERVAL_SECONDS = 0.2
+DEFAULT_HOLD_SECONDS = 2.0
+MIN_HOLD_SECONDS = 0.2
+MAX_HOLD_SECONDS = 10.0
+HOLD_SECONDS_STEP = 0.1
+BLEAK_CONNECT_TIMEOUT = 10.0

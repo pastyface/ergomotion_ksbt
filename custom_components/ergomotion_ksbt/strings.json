@@ -1,0 +1,38 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up Ergomotion KSBT",
+        "description": "Enter the Bluetooth address for your bed.\n\nDiscovered KSBT devices:\n{discovered_devices}",
+        "data": {
+          "address": "Bluetooth address",
+          "name": "Display name"
+        }
+      },
+      "bluetooth_confirm": {
+        "title": "Set up Ergomotion KSBT",
+        "description": "Add {name} at {address}?"
+      }
+    },
+    "error": {
+      "invalid_address": "The Bluetooth address format is invalid"
+    },
+    "abort": {
+      "already_configured": "This bed is already configured",
+      "not_supported": "This Bluetooth device does not look like a KSBT bed"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Movement timing",
+        "description": "Tune how long each cover command is held before the integration sends stop.",
+        "data": {
+          "head_hold_seconds": "Head hold duration (seconds)",
+          "feet_hold_seconds": "Feet hold duration (seconds)",
+          "lumbar_hold_seconds": "Lumbar hold duration (seconds)"
+        }
+      }
+    }
+  }
+}

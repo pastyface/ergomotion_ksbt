@@ -1,0 +1,113 @@
+press_action:
+  name: Press action
+  description: Send one verified preset-style bed action.
+  fields:
+    address:
+      name: Bluetooth address
+      description: Optional if only one KSBT bed is configured.
+      example: "F7:73:0C:CD:25:06"
+      selector:
+        text:
+    action:
+      name: Action
+      description: The action to trigger.
+      required: true
+      selector:
+        select:
+          options:
+            - back_up
+            - back_down
+            - feet_up
+            - feet_down
+            - lumbar_up
+            - lumbar_down
+            - zero_g
+            - flat
+            - relax
+            - anti_snore
+            - tv
+            - memory
+            - massage_all
+            - massage_head
+            - massage_foot
+            - massage_timer
+            - light
+hold_action:
+  name: Hold action
+  description: Send a repeated hold-style motion command for a chosen duration.
+  fields:
+    address:
+      name: Bluetooth address
+      description: Optional if only one KSBT bed is configured.
+      example: "F7:73:0C:CD:25:06"
+      selector:
+        text:
+    action:
+      name: Action
+      description: The directional hold action to trigger.
+      required: true
+      selector:
+        select:
+          options:
+            - back_up
+            - back_down
+            - feet_up
+            - feet_down
+            - lumbar_up
+            - lumbar_down
+    duration:
+      name: Duration
+      description: Hold duration in seconds.
+      default: 2.0
+      selector:
+        number:
+          min: 0.2
+          max: 30
+          step: 0.1
+          mode: box
+prepare:
+  name: Prepare connection
+  description: Send the app-style query and light prelude without a movement command.
+  fields:
+    address:
+      name: Bluetooth address
+      description: Optional if only one KSBT bed is configured.
+      example: "F7:73:0C:CD:25:06"
+      selector:
+        text:
+stop:
+  name: Stop
+  description: Send an explicit stop command using the normal app-style prelude.
+  fields:
+    address:
+      name: Bluetooth address
+      description: Optional if only one KSBT bed is configured.
+      example: "F7:73:0C:CD:25:06"
+      selector:
+        text:
+set_debug_logging:
+  name: Set debug logging
+  description: Enable or disable live decoded notification logging to the Home Assistant log.
+  fields:
+    address:
+      name: Bluetooth address
+      description: Optional if only one KSBT bed is configured.
+      example: "F7:73:0C:CD:25:06"
+      selector:
+        text:
+    enabled:
+      name: Enabled
+      description: Turn live debug logging on or off.
+      required: true
+      selector:
+        boolean:
+dump_debug_state:
+  name: Dump debug state
+  description: Write the current decoded state and last notification to the Home Assistant log.
+  fields:
+    address:
+      name: Bluetooth address
+      description: Optional if only one KSBT bed is configured.
+      example: "F7:73:0C:CD:25:06"
+      selector:
+        text:
