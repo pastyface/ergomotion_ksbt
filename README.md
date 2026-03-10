@@ -172,9 +172,3 @@ For live reverse-engineering, call `ergomotion_ksbt.set_debug_logging` with `ena
   3. `aa01000901210000020000d155`
   4. wait `1.0s`
 
-## Repo checklist before first release
-
-- Replace the GitHub URLs in `custom_components/ergomotion_ksbt/manifest.json` if your final repository name differs
-- Add brand images under `custom_components/ergomotion_ksbt/brand/` if you want custom icons in newer Home Assistant versions
-- Create a GitHub release after your first tagged version if you want HACS to offer release selection
-
