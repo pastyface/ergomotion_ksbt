@@ -1,6 +1,6 @@
 # Ergomotion KSBT for Home Assistant
 
-[![Open your Home Assistant instance and open this repository inside HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=dewir&repository=ergomotion_ksbt&category=integration)
+[![Open your Home Assistant instance and open this repository inside HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=pastyface&repository=ergomotion_ksbt&category=integration)
 
 Custom Home Assistant integration for KSBT-based Ergomotion beds over Bluetooth Low Energy.
 
