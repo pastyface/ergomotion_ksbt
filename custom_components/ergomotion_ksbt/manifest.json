@@ -1,6 +1,12 @@
 {
   "domain": "ergomotion_ksbt",
   "name": "Ergomotion KSBT",
+  "bluetooth": [
+    {
+      "local_name": "KSBT*",
+      "connectable": true
+    }
+  ],
   "codeowners": [
     "@pastyface"
   ],
@@ -12,11 +18,5 @@
   "integration_type": "device",
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/pastyface/ergomotion_ksbt/issues",
-  "version": "0.1.1",
-  "bluetooth": [
-    {
-      "local_name": "KSBT*",
-      "connectable": true
-    }
-  ]
+  "version": "0.1.1"
 }

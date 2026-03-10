@@ -4,6 +4,7 @@ import voluptuous as vol
 from homeassistant.components import bluetooth
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant, ServiceCall, callback
+from homeassistant.helpers import config_validation as cv
 
 from .client import ErgomotionKsbtHub
 from .const import DOMAIN, PLATFORMS
@@ -52,6 +53,7 @@ DEBUG_LOGGING_SCHEMA = vol.Schema(
         vol.Required(SERVICE_ENABLED): bool,
     }
 )
+CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
 
 
 async def async_setup(hass: HomeAssistant, _config) -> bool:
