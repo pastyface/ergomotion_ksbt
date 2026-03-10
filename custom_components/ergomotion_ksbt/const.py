@@ -1,4 +1,4 @@
-﻿from homeassistant.const import Platform
+from homeassistant.const import Platform
 
 DOMAIN = "ergomotion_ksbt"
 NAME = "Ergomotion KSBT"
